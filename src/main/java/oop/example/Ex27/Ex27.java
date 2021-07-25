@@ -1,8 +1,10 @@
 /*
- *  UCF COP3330 Summer 2021 Assignment 1 Solution
+ *  UCF COP3330 Summer 2021 Assignment 2 Solution
  *  Copyright 2021 Keri Mullens
  */
 package oop.example.Ex27;
+
+import java.util.Scanner;
 
 public class Ex27 {
     public static void main(String[] args) {
@@ -39,5 +41,25 @@ public class Ex27 {
             specific validation functions.
             Use a single output statement to display the outputs.*/
 
+        Scanner input = new Scanner(System.in);
+        System.out.print("Enter the first name: ");
+        String firstName = input.nextLine();
+
+        System.out.print("Enter the last name: ");
+        String lastName = input.nextLine();
+
+        System.out.print("Enter the ZIP code: ");
+        String zipCode = input.nextLine();
+
+        System.out.print("Enter an employee ID: ");
+        String employeeID = input.nextLine();
+
+        System.out.print("\"" + firstName + "\" is not a valid first name. It is too short.");
+        System.out.print("\"" + lastName +"\" is not a valid last name. It is too short.");
+        System.out.print("The first name must be filled in.");
+        System.out.print("The last name must be filled in.");
+        System.out.print("The ZIP code must be numeric.");
+        System.out.print(employeeID + "is not a valid ID.");
+        System.out.print("There were no errors found.");
     }
 }

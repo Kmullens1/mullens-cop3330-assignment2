@@ -1,10 +1,14 @@
 /*
- *  UCF COP3330 Summer 2021 Assignment 1 Solution
+ *  UCF COP3330 Summer 2021 Assignment 2 Solution
  *  Copyright 2021 Keri Mullens
  */
 package oop.example.Ex28;
 
 import java.util.Scanner;
+
+//FIXME - Check requirements
+//FIXME - Fix classes
+//FIXME - Add in Test Cases
 
 public class Ex28 {
     static int calculateSum()

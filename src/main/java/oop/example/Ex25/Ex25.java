@@ -1,8 +1,10 @@
 /*
- *  UCF COP3330 Summer 2021 Assignment 1 Solution
+ *  UCF COP3330 Summer 2021 Assignment 2 Solution
  *  Copyright 2021 Keri Mullens
  */
 package oop.example.Ex25;
+
+import java.util.Scanner;
 
 public class Ex25 {
     public static void main(String[] args) {
@@ -25,5 +27,15 @@ public class Ex25 {
             and returns a value you can evaluate to determine the password strength. Do not have
             the function return a string—you may need to support multiple languages in the future.
             Use a single output statement.*/
+
+
+        Scanner input = new Scanner(System.in);
+        System.out.print("What is the password? ");
+        String password = input.nextLine();
+
+        System.out.print("The password '" + password + "' is a very weak password.");
+        System.out.print("The password '" + password + "' is a weak password.");
+        System.out.print("The password '" + password + "' is a strong password.");
+        System.out.print("The password '" + password + "' is a very strong password.");
     }
 }

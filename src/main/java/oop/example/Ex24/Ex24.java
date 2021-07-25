@@ -1,12 +1,14 @@
 /*
- *  UCF COP3330 Summer 2021 Assignment 1 Solution
+ *  UCF COP3330 Summer 2021 Assignment 2 Solution
  *  Copyright 2021 Keri Mullens
  */
-package oop.example;
+package oop.example.Ex24;
 
 import java.util.Arrays;
 import java.util.Locale;
 import java.util.Scanner;
+
+//FIXME - INCOMPLETE
 
 public class Ex24 { //////////////This is NOT how you create a class in Java////////////
     public Boolean isAnagram(String first, String second)
@@ -64,5 +66,8 @@ public class Ex24 { //////////////This is NOT how you create a class in Java////
         else
             System.out.println(first + " and " + second + " are not anagrams.");
 
-    } //Don't forget to add in Junit 5 and test cases
+    }
+    //FIXME Don't forget to add in test cases
+    //FIXME Does case matter?
+    //FIXME classes
 }

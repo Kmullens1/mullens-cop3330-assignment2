@@ -1,8 +1,10 @@
 /*
- *  UCF COP3330 Summer 2021 Assignment 1 Solution
+ *  UCF COP3330 Summer 2021 Assignment 2 Solution
  *  Copyright 2021 Keri Mullens
  */
 package oop.example.Ex29;
+
+import java.util.Scanner;
 
 public class Ex29 {
     public static void main(String[] args) {
@@ -30,6 +32,15 @@ public class Ex29 {
             Don’t allow the user to enter 0.
             Don’t allow non-numeric values.
             Use a loop to trap bad input, so you can ensure that the user enters valid values.*/
+
+        Scanner input = new Scanner(System.in);
+        System.out.print("What is the rate of return? ");
+        double rateOfReturn = input.nextDouble();
+
+        System.out.print("Sorry. That's not a valid input.");
+
+        double yearsToDouble = -1500; //FIXME - Initialized for now
+        System.out.print("It will take " + yearsToDouble + " years to double your initial investment.");
 
     }
 }

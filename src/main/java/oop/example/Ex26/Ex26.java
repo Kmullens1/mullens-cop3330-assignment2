@@ -1,10 +1,13 @@
 /*
- *  UCF COP3330 Summer 2021 Assignment 1 Solution
+ *  UCF COP3330 Summer 2021 Assignment 2 Solution
  *  Copyright 2021 Keri Mullens
  */
 package oop.example.Ex26;
 
 import java.util.Scanner;
+//FIXME - INCOMPLETE
+//FIXME - Fix classes format
+//FIXME - Test Cases
 
 public class Ex26 {
 

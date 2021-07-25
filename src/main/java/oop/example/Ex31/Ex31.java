@@ -1,5 +1,5 @@
 /*
- *  UCF COP3330 Summer 2021 Assignment 1 Solution
+ *  UCF COP3330 Summer 2021 Assignment 2 Solution
  *  Copyright 2021 Keri Mullens
  */
 package oop.example.Ex31;
@@ -33,6 +33,11 @@ public class Ex31 {
             Ensure that the heart rate and age are entered as numbers. Don’t allow the user
             to continue without entering valid inputs.
             Display the results in a tabular format.*/
+
+        System.out.print("Resting Pulse: " + 65 + " Age: " + 22);
+
+        System.out.print("Intensity    | Rate\n-------------|--------); ");
+        System.out.print(55 + "% | " + 138 + "bpm");
 
     }
 }
