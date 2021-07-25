@@ -4,6 +4,8 @@
  */
 package oop.example.Ex37;
 
+import java.util.Scanner;
+
 public class Ex37 {
     public static void main(String[] args) {
         //Password Generator
@@ -21,6 +23,19 @@ public class Ex37 {
         Constraints
             Use lists to store the characters you’ll use to generate the passwords.
             Add some randomness to the password generation.*/
+
+        Scanner input = new Scanner(System.in);
+        System.out.print("What's the minimum length? ");
+        int minLength = input.nextInt();
+
+        System.out.print("How many special characters? ");
+        String numOfSpecialCharacters = input.nextLine();
+
+        System.out.print("How many numbers? ");
+        int numOfNumbers = input.nextInt();
+
+        String password = "";
+        System.out.print("Your password is " + password);
 
     }
 }

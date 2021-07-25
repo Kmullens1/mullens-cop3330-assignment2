@@ -4,6 +4,8 @@
  */
 package oop.example.Ex33;
 
+import java.util.Scanner;
+
 public class Ex33 {
     public static void main(String[] args) {
         //Magic 8 Ball
@@ -19,6 +21,16 @@ public class Ex33 {
                 Constraint
         The value should be chosen randomly using a pseudo random number generator.
         Store the possible choices in a list and select one at random.*/
+
+        Scanner input = new Scanner(System.in);
+        System.out.print("What's your question? ");
+        String question = input.nextLine();
+
+
+        System.out.print("Yes.");
+        System.out.print("No.");
+        System.out.print("Maybe.");
+        System.out.print("Ask again later.");
 
     }
 }

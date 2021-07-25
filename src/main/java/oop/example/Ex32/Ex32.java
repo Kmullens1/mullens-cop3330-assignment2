@@ -4,6 +4,8 @@
  */
 package oop.example.Ex32;
 
+import java.util.Scanner;
+
 public class Ex32 {
     public static void main(String[] args) {
         //Guess the Number Game
@@ -29,6 +31,25 @@ public class Ex32 {
         Constraints
             Don’t allow any non-numeric data entry.
             During the game, count non-numeric entries as wrong guesses.*/
+
+        Scanner input = new Scanner(System.in);
+        System.out.print("Let's play Guess the Number.\nPick a difficulty level (1, 2, or 3): ");
+        String difficulty = input.nextLine();
+
+        System.out.print("I have my number. What's your guess? ");
+        String guess = input.nextLine();
+
+        System.out.print("Too low. Guess again: ");
+        guess = input.nextLine();
+
+        System.out.print("Too high. Guess again: ");
+        guess = input.nextLine();
+
+        System.out.print("You got it in " + 3 + " guesses!"); //FIXME - REMOVE HARDCODED NUMBER
+        System.out.print("Play again? ");
+        String decision = input.nextLine();
+
+        System.out.print("Goodbye!");
 
     }
 }

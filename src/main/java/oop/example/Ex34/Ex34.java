@@ -4,6 +4,8 @@
  */
 package oop.example.Ex34;
 
+import java.util.Scanner;
+
 public class Ex34 {
     public static void main(String[] args) {
         //Employee List Removal
@@ -34,6 +36,19 @@ public class Ex34 {
             Jeremy Goodwin
         Constraint
             Use an array or list to store the names.*/
+
+        System.out.print("There are " + 5 + " employees:\n");
+
+        //Print out list with a 'for' loop?
+        /*John Smith
+        Jackie Jackson
+        Chris Jones
+        Amanda Cullen
+        Jeremy Goodwin*/
+
+        Scanner input = new Scanner(System.in);
+        System.out.print("Enter an employee name to remove: ");
+        String employeeToRemove = input.nextLine();
 
     }
 }

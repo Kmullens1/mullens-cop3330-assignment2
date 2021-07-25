@@ -4,6 +4,8 @@
  */
 package oop.example.Ex38;
 
+import java.util.Scanner;
+
 public class Ex38 {
     public static void main(String[] args) {
         //Filtering Values
@@ -24,5 +26,12 @@ public class Ex38 {
             The function takes in the old array and returns the new array.
          */
 
+        System.out.print("Enter a list of numbers, separated by spaces: ");
+        //For loop to read numbers
+
+        int evenNumbers = -1500; // FIXME - Will eventually be a list
+        System.out.print("The even numbers are " + evenNumbers + ".");
+
     }
+
 }

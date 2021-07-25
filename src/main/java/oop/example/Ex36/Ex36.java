@@ -4,6 +4,8 @@
  */
 package oop.example.Ex36;
 
+import java.util.Scanner;
+
 public class Ex36 {
     public static void main(String[] args) {
         //Computing Statistics
@@ -31,6 +33,22 @@ public class Ex36 {
             Be sure to exclude the "done" entry from the array of inputs.
             Be sure to properly convert numeric values to strings.
             Keep the input separate from the processing and the output.*/
+
+        Scanner input = new Scanner(System.in);
+        System.out.print("Enter a number: ");
+        String number = input.nextLine();       //FIXME - String or int???
+
+        System.out.print("Numbers: "); //print the list after quotation
+
+        double average = -1500;
+        double min = -1500;
+        double max = -1500;
+        double standardDev = -1500;
+
+        System.out.print("The average is " + average + ".\n" +
+                "The minimum is " + min + ".\n" +
+                "The maximum is " + max + ".\n" +
+                "The standard deviation is " + standardDev + ".");
 
     }
 }

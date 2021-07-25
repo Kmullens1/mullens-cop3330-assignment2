@@ -4,6 +4,8 @@
  */
 package oop.example.Ex35;
 
+import java.util.Scanner;
+
 public class Ex35 {
     public static void main(String[] args) {
         //Picking a Winner
@@ -26,6 +28,13 @@ public class Ex35 {
             Don’t include a blank entry in the array.
             Some languages require that you define the length of the array ahead of time.
             You may need to find another data structure, like an ArrayList.*/
+
+        Scanner input = new Scanner(System.in);
+        System.out.print("Enter a name: ");
+        String name = input.next();
+
+        String randomWinner = "";
+        System.out.print("The winner is... " + randomWinner);
 
     }
 }
