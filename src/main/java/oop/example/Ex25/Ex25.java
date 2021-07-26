@@ -28,14 +28,13 @@ public class Ex25 {
             the function return a string—you may need to support multiple languages in the future.
             Use a single output statement.*/
 
+        PasswordValidator validate = new PasswordValidator();
 
-        Scanner input = new Scanner(System.in);
-        System.out.print("What is the password? ");
-        String password = input.nextLine();
+        String password = validate.inputReader();
+        String outputStatement = validate.checkStrength(password);
 
-        System.out.print("The password '" + password + "' is a very weak password.");
-        System.out.print("The password '" + password + "' is a weak password.");
-        System.out.print("The password '" + password + "' is a strong password.");
-        System.out.print("The password '" + password + "' is a very strong password.");
+        //FIXME - Add in Testcases
+        System.out.print(outputStatement);
+
     }
 }

@@ -4,38 +4,9 @@
  */
 package oop.example.Ex24;
 
-import java.util.Arrays;
-import java.util.Locale;
 import java.util.Scanner;
 
-//FIXME - INCOMPLETE
-
-public class Ex24 { //////////////This is NOT how you create a class in Java////////////
-    public Boolean isAnagram(String first, String second)
-    {
-        int length1 = first.length();
-        int length2 = second.length();
-
-        if (length2 != length1)
-            return false;
-
-        else
-        {
-            char tempChar1[] = first.toCharArray();
-            char tempChar2[] = second.toCharArray();
-            Arrays.sort(tempChar1);
-            Arrays.sort(tempChar2);
-
-            for (int i = 0; i < length1; i++)
-            {
-                if(tempChar1[i] != tempChar2[i])
-                {
-                    return false;
-                }//Add in a way to convert uppercase letters to lowercase letters for more accuracy
-            }
-        }
-        return true;
-    }
+public class Ex24 {
 
     public static void main(String[] args) {
         //Anagram Checker
@@ -53,7 +24,7 @@ public class Ex24 { //////////////This is NOT how you create a class in Java////
             Implement the program using a function called isAnagram, which takes in two words as its
             arguments and returns true or false. Invoke this function from your main program.
             Check that both words are the same length.*/
-        Ex24 name = new Ex24();
+        AnagramChecker name = new AnagramChecker();
         System.out.print("Enter two strings and I'll tell you if they are anagrams:\nEnter the first string: ");
         Scanner input = new Scanner(System.in);
         String first = input.nextLine();
@@ -61,7 +32,7 @@ public class Ex24 { //////////////This is NOT how you create a class in Java////
         System.out.print("Enter the second string: ");
         String second = input.nextLine();
 
-        if (name.isAnagram(first, second))//A function that compares the strings
+        if (name.isAnagram(first, second)) //A function that compares the strings
             System.out.println(first + " and " + second + " are anagrams.");
         else
             System.out.println(first + " and " + second + " are not anagrams.");
@@ -69,5 +40,4 @@ public class Ex24 { //////////////This is NOT how you create a class in Java////
     }
     //FIXME Don't forget to add in test cases
     //FIXME Does case matter?
-    //FIXME classes
 }
