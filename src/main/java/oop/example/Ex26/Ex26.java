@@ -4,21 +4,42 @@
  */
 package oop.example.Ex26;
 
+import oop.example.Ex24.AnagramChecker;
+
+import java.text.DecimalFormat;
 import java.util.Scanner;
 //FIXME - INCOMPLETE
-//FIXME - Fix classes format
 //FIXME - Test Cases
 
 public class Ex26 {
 
-    static double calculateMonthsUntilPaidOff(double balance, double APR, double mPay)
-    {
-        APR = APR * 0.01;
-        double dailyRate = APR/365;
-        double Months = -(1/30) * Math.log(1 + balance/mPay * (1 - Math.pow(1 + dailyRate, 30))) / Math.log(1 + dailyRate);
+    private static final Scanner input = new Scanner(System.in);
+    private static double balance;
+    private static double APR;
+    private static double mPay;
 
-        return Months;
+    public static void readUserInput()
+    {
+        System.out.print("What is your balance? ");
+        balance = input.nextInt();
+
+        System.out.print("What is the APR on the card (as a percent)? ");
+        APR = input.nextInt();
+
+        System.out.print("What is the monthly payment you can make? ");
+        mPay = input.nextInt();
+
+        calculateMonths calculate = new calculateMonths();
+
+        double numOfMonths = calculate.calculateMonthsUntilPaidOff(balance, APR, mPay);
+
+        DecimalFormat df = new DecimalFormat("###.###");
+        String output = "It will take you " + df.format(numOfMonths) + " months to pay off this card.";
+
+        System.out.print(output);
+
     }
+
 
     public static void main(String[] args) {
         //Months to Pay Off a Credit Card
@@ -49,21 +70,8 @@ public class Ex26 {
             any of these values outside the function.
             Round fractions of a cent up to the next cent.*/
 
-        Scanner input = new Scanner(System.in);
+        readUserInput();
 
-        System.out.print("What is your balance? ");
-        double balance = input.nextInt();
-
-        System.out.print("What is the APR on the card (as a percent)? ");
-        double APR = input.nextInt();
-
-        System.out.print("What is the monthly payment you can make? ");
-        double mPay = input.nextInt();
-
-        double numOfMonths = calculateMonthsUntilPaidOff(balance, APR, mPay);
-
-
-        System.out.print("It will take you " + numOfMonths + " months to pay off this card.");
     }
 }
 
