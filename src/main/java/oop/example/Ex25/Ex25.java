@@ -7,6 +7,17 @@ package oop.example.Ex25;
 import java.util.Scanner;
 
 public class Ex25 {
+    private static String password;
+
+    public static String inputReader()
+    {
+        Scanner input = new Scanner(System.in);
+        System.out.print("What is the password? ");
+        password = input.nextLine();
+
+        return password;
+    }
+
     public static void main(String[] args) {
         //Password Strength Indicator
         /*Functions help you abstract away complex operations, but they also help you
@@ -28,9 +39,9 @@ public class Ex25 {
             the function return a string—you may need to support multiple languages in the future.
             Use a single output statement.*/
 
-        PasswordValidator validate = new PasswordValidator();
+        inputReader();
 
-        String password = validate.inputReader();
+        PasswordValidator validate = new PasswordValidator();
         String outputStatement = validate.checkStrength(password);
 
         //FIXME - Add in Testcases

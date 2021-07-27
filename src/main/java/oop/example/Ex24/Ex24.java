@@ -7,6 +7,26 @@ package oop.example.Ex24;
 import java.util.Scanner;
 
 public class Ex24 {
+    private static final Scanner input = new Scanner(System.in);
+    private static String first;
+    private static String second;
+
+    public static void readUserInput()
+    {
+        System.out.print("Enter two strings and I'll tell you if they are anagrams:\nEnter the first string: ");
+        first = input.nextLine();
+
+        System.out.print("Enter the second string: ");
+        second = input.nextLine();
+
+        AnagramChecker name = new AnagramChecker();
+
+        if (name.isAnagram(first, second)) //A function that compares the strings
+            System.out.println(first + " and " + second + " are anagrams.");
+        else
+            System.out.println(first + " and " + second + " are not anagrams.");
+
+    }
 
     public static void main(String[] args) {
         //Anagram Checker
@@ -24,18 +44,8 @@ public class Ex24 {
             Implement the program using a function called isAnagram, which takes in two words as its
             arguments and returns true or false. Invoke this function from your main program.
             Check that both words are the same length.*/
-        AnagramChecker name = new AnagramChecker();
-        System.out.print("Enter two strings and I'll tell you if they are anagrams:\nEnter the first string: ");
-        Scanner input = new Scanner(System.in);
-        String first = input.nextLine();
 
-        System.out.print("Enter the second string: ");
-        String second = input.nextLine();
-
-        if (name.isAnagram(first, second)) //A function that compares the strings
-            System.out.println(first + " and " + second + " are anagrams.");
-        else
-            System.out.println(first + " and " + second + " are not anagrams.");
+        readUserInput();
 
     }
     //FIXME Don't forget to add in test cases

@@ -1,22 +1,10 @@
 package oop.example.Ex25;
 
-import java.util.Scanner;
-
 public class PasswordValidator {
-
-    String inputReader()
-    {
-        Scanner input = new Scanner(System.in);
-        System.out.print("What is the password? ");
-        String password = input.nextLine();
-
-        return password;
-    }
 
     String checkStrength(String password)
     {
         String outputStatement = "";
-        int charTypeIndicator = 0;
         if(password.length() < 8)
         {
             if(letters(password))
