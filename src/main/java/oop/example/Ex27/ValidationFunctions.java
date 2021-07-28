@@ -4,36 +4,84 @@ public class ValidationFunctions {
     //The first name must be filled in.
     boolean validateFirstNameNotBlank(String firstName)
     {
-        return true;
+        boolean result = true;
+        if(firstName.equals(""))
+            result = false;
+
+        return result;
     }
 
     //The last name must be filled in.
     boolean validateLastNameNotBlank(String lastName)
     {
-        return true;
+        boolean result = true;
+        if(lastName.equals(""))
+            result = false;
+
+        return result;
     }
 
     //The first and last names must be at least two characters long.
     boolean validateFirstNameLength(String firstName)
     {
-        return true;
+        boolean result = true;
+        if(firstName.length() == 1)
+            result = false;
+
+        return result;
     }
 
     boolean validateLastNameLength(String lastName)
     {
-        return true;
+        boolean result = true;
+        if(lastName.length() == 1)
+            result = false;
+
+        return result;
     }
 
     //An employee ID is in the format AA-1234. So, two letters, a hyphen, and four numbers.
     boolean validateEmployeeIDFormat(String employeeID)
     {
-        return true;
+        boolean result = true;
+
+        //check for initial letters
+        char arrayVersion[] = employeeID.toCharArray();
+        for(int c = 0; c < 2; c++)
+        {
+            if (!(Character.isLetter(c)))
+                result = false;
+        }
+
+        //Check for hyphen position
+        if(!(arrayVersion[2] == '-'))
+            result = false;
+
+        //Check for numbers at end
+        for(int c = 3; c < employeeID.length(); c++)
+        {
+            if (!Character.isDigit(c))
+                result = false;
+        }
+
+        //check length
+        if(employeeID.length() > 7)
+            result = false;
+
+        return result;
     }
 
     //The ZIP code must be a number.
     boolean validateZipCode(String zipCode)
     {
-        return true;
+        boolean result = true;
+        for(char c : zipCode.toCharArray())
+        {
+            if (!Character.isDigit(c))
+                result = false;
+        }
+
+        return result;
     }
 
 }

@@ -33,17 +33,17 @@ public class Ex27 {
 
         ValidationFunctions validate = new ValidationFunctions();
         if(!validate.validateFirstNameNotBlank(firstName))
-            output = "The first name must be filled in.";
+            output = "The first name must be filled in.\n";
         if(!validate.validateLastNameNotBlank(lastName))
-            output = "The last name must be filled in.";
+            output = output + "The last name must be filled in.\n";
         if(!validate.validateFirstNameLength(firstName))
-            output = "\"" + firstName + "\" is not a valid first name. It is too short.";
+            output = output + "\"" + firstName + "\" is not a valid first name. It is too short.\n";
         if(!validate.validateLastNameLength(lastName))
-            output = "\"" + lastName +"\" is not a valid last name. It is too short.";
+            output = output + "\"" + lastName +"\" is not a valid last name. It is too short.\n";
         if(!validate.validateEmployeeIDFormat(employeeID))
-            output = employeeID + "is not a valid ID.";
+            output = output + employeeID + " is not a valid ID.\n";
         if(!validate.validateZipCode(zipCode))
-            output = "The ZIP code must be numeric.";
+            output = output + "The ZIP code must be numeric.\n";
 
         if(output.equals(""))
             output = "There were no errors found.";
