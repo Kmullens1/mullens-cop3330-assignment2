@@ -21,20 +21,29 @@ public class Ex26 {
     public static void readUserInput()
     {
         System.out.print("What is your balance? ");
-        balance = input.nextInt();
+        balance = input.nextDouble();
 
         System.out.print("What is the APR on the card (as a percent)? ");
-        APR = input.nextInt();
+        APR = input.nextDouble();
 
         System.out.print("What is the monthly payment you can make? ");
-        mPay = input.nextInt();
+        mPay = input.nextDouble();
 
         calculateMonths calculate = new calculateMonths();
 
-        double numOfMonths = calculate.calculateMonthsUntilPaidOff(balance, APR, mPay);
+        String output = "";
+        if(!calculate.validInputChecker(balance, APR, mPay))
+        {
+            output = "Invalid entries exist";
+        }
 
-        DecimalFormat df = new DecimalFormat("###.###");
-        String output = "It will take you " + df.format(numOfMonths) + " months to pay off this card.";
+        else
+        {
+            double numOfMonths = calculate.calculateMonthsUntilPaidOff(balance, APR, mPay);
+
+            DecimalFormat df = new DecimalFormat("###.###");
+            output = "It will take you " + df.format(numOfMonths) + " months to pay off this card.";
+        }
 
         System.out.print(output);
 
