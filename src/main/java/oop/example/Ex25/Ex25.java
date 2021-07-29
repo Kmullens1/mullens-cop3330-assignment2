@@ -44,7 +44,6 @@ public class Ex25 {
         PasswordValidator validate = new PasswordValidator();
         String outputStatement = validate.checkStrength(password);
 
-        //FIXME - Add in Testcases
         System.out.print(outputStatement);
 
     }

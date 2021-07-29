@@ -4,7 +4,11 @@
  */
 package oop.example.Ex40;
 
+import java.util.Scanner;
+
 public class Ex40 {
+    private static final Scanner input = new Scanner(System.in);
+
     public static void main(String[] args) {
         //Filtering Records
         /*Sorting records is helpful, but sometimes you need to filter down the
@@ -28,7 +32,6 @@ public class Ex40 {
                   Jake Jacobson | Programmer        |
         Constraint
             Implement the data using an array of maps or an associative array.*/
-
 
 
 

@@ -4,12 +4,8 @@
  */
 package oop.example.Ex26;
 
-import oop.example.Ex24.AnagramChecker;
-
 import java.text.DecimalFormat;
 import java.util.Scanner;
-//FIXME - INCOMPLETE
-//FIXME - Test Cases
 
 public class Ex26 {
 

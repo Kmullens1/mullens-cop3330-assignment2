@@ -4,26 +4,28 @@
  */
 package oop.example.Ex28;
 
+import java.text.DecimalFormat;
 import java.util.Scanner;
 
-//FIXME - Check requirements
-//FIXME - Fix classes
-//FIXME - Add in Test Cases
-
 public class Ex28 {
-    static int calculateSum()
-    {
-        Scanner input = new Scanner(System.in);
+    private static final Scanner input = new Scanner(System.in);
+    private static double[] first = new double[]{0, 0, 0, 0, 0};
 
-        int sum = 0;
+    public static String readUserInput()
+    {
         for(int i = 0; i < 5; i++)
         {
             System.out.print("Enter a number: ");
-            sum = sum + input.nextInt();
+            first[i] = input.nextDouble();
         }
-        return sum;
-    }
+        CalculateSummation calculate = new CalculateSummation();
+        double sum = calculate.calculateSum(first);
 
+        DecimalFormat df = new DecimalFormat("###.###");
+        String output = "The total is " + df.format(sum) + ".";
+
+        return output;
+    }
     public static void main(String[] args) {
         //Adding Numbers
         /*In previous programs, you asked the user for repeated input by writing the
@@ -42,8 +44,8 @@ public class Ex28 {
             The prompting must use repetition, such as a counted loop, not three separate prompts.
             Create a flowchart before writing the program.*/
 
-        int sum = calculateSum();
+        String output = readUserInput();
 
-        System.out.println("The total is " + sum + ".");
+        System.out.println(output);
     }
 }

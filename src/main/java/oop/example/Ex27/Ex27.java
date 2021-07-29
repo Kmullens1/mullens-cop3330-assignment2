@@ -4,8 +4,6 @@
  */
 package oop.example.Ex27;
 
-import oop.example.Ex24.AnagramChecker;
-
 import java.util.Scanner;
 
 public class Ex27 {

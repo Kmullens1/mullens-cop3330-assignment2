@@ -48,6 +48,5 @@ public class Ex24 {
         readUserInput();
 
     }
-    //FIXME Don't forget to add in test cases
-    //FIXME Does case matter?
+
 }

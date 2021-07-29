@@ -1,6 +1,5 @@
 package oop.example.Ex27;
 
-import oop.example.Ex24.AnagramChecker;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
