@@ -4,8 +4,6 @@
  */
 package oop.example.Ex30;
 
-//FIXME - Double check requirements
-//FIXME - Make Classes
 //FIXME - Make Test Cases
 
 public class Ex30 {
@@ -20,14 +18,10 @@ public class Ex30 {
             12 x 12 = 144
         Constraint
             Use a nested loop to complete this program.*/
-        for(int i = 0; i < 13; i++)
-        {
-            for(int j = 0; j<13; j++)
-            {
-                int product = i * j;
-                System.out.println(i + "x" + j + "=" + product);
-            }
-        }
+       GenerateMultiplicationTables generate = new GenerateMultiplicationTables();
+       String output = generate.generateTables();
+
+       System.out.print(output);
 
     }
 }
