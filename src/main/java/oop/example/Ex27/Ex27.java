@@ -82,7 +82,7 @@ public class Ex27 {
             a validateInput function that takes in all of the input data and invokes the
             specific validation functions.
             Use a single output statement to display the outputs.*/
-
+        //FIXME - The validateEmployeeIDFormat function is not working properly
         String output = readUserInput();
         System.out.print(output);
     }

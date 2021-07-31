@@ -40,6 +40,8 @@ public class ValidationFunctions {
         return result;
     }
 
+
+    //FIXME - This function doesn't work properly - Find out why
     //An employee ID is in the format AA-1234. So, two letters, a hyphen, and four numbers.
     boolean validateEmployeeIDFormat(String employeeID)
     {
