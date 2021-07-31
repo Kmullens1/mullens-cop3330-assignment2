@@ -4,7 +4,40 @@
  */
 package oop.example.Ex29;
 
+import java.text.DecimalFormat;
+import java.util.Scanner;
+
 public class Ex29 {
+    private static final Scanner input = new Scanner(System.in);
+    private static double yearsToDouble;
+
+    public static void inputReader()
+    {
+        boolean valid = false;
+
+        String data = "";
+        while(!valid)
+        {
+            System.out.print("What is the rate of return? ");
+            data = input.nextLine();
+
+            TimeToDoubleCalculator verify = new TimeToDoubleCalculator();
+            if (data.equals("0") || verify.containsLetters(data))
+            {
+                System.out.print("Sorry. That's not a valid input.\n");
+            }
+            else
+                valid = true;
+        }
+
+        TimeToDoubleCalculator calculate = new TimeToDoubleCalculator();
+        yearsToDouble = calculate.doubleEquation(data);
+
+        DecimalFormat df = new DecimalFormat("###.###");
+        System.out.print("It will take " + df.format(yearsToDouble) + " years to double your initial investment.");
+    }
+
+
     public static void main(String[] args) {
         //Handling Bad Input
         /*The rule of 72 is a quick method for estimating how long it will take to
@@ -31,8 +64,7 @@ public class Ex29 {
             Don’t allow non-numeric values.
             Use a loop to trap bad input, so you can ensure that the user enters valid values.*/
 
-        TimeToDoubleCalculator calculate = new TimeToDoubleCalculator();
-        calculate.timeToDouble();
+        inputReader();
 
     }
 }
