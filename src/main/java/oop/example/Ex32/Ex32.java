@@ -13,13 +13,23 @@ public class Ex32 {
         String decision = "y";
         while (decision.equals("y")) {
             System.out.print("Let's play Guess the Number.\nPick a difficulty level (1, 2, or 3): ");
-            int difficulty = input.nextInt();
+            String choice = input.nextLine();
+            while(!(choice.equals("1")) || !(choice.equals("2")) || !(choice.equals("3")))
+            {
+                System.out.print("That is an invalid difficulty level. Choose again: ");
+                choice = input.nextLine();
+            }
+
+            int difficulty = Integer.parseInt(choice);
             RandomNumberGenerator generate = new RandomNumberGenerator();
             int randomNumber = generate.generateNumber(difficulty);
 
+            //FIXME FIXME FIXME
             System.out.print("I have my number. What's your guess? ");
-            int guess = input.nextInt();
+            String number = input.nextLine();
+            //if number is a string, ++count --> if number is a number analyze if it's too high or too low
 
+            int guess = Integer.parseInt(number);
             int count = 1;
             while (randomNumber != guess) {
                 String feedback = generate.analyzeGuess(randomNumber, guess);
