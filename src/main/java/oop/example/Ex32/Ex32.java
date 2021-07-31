@@ -7,10 +7,38 @@ package oop.example.Ex32;
 import java.util.Scanner;
 
 public class Ex32 {
+    private static final Scanner input = new Scanner(System.in);
+
+    public static void readUserInput() {
+        String decision = "y";
+        while (decision.equals("y")) {
+            System.out.print("Let's play Guess the Number.\nPick a difficulty level (1, 2, or 3): ");
+            int difficulty = input.nextInt();
+            RandomNumberGenerator generate = new RandomNumberGenerator();
+            int randomNumber = generate.generateNumber(difficulty);
+
+            System.out.print("I have my number. What's your guess? ");
+            int guess = input.nextInt();
+
+            int count = 1;
+            while (randomNumber != guess) {
+                String feedback = generate.analyzeGuess(randomNumber, guess);
+                System.out.print(feedback);
+                guess = input.nextInt();
+                count++;
+            }
+
+            System.out.print("You got it in " + count + " guesses!\nPlay again? ");
+            decision = input.next();
+        }
+        System.out.print("Goodbye!");
+
+    }
+
     public static void main(String[] args) {
         //Guess the Number Game
         /*Write a Guess the Number game that has three levels of difficulty. The first
-        level of difficulty would bea number between 1 and 10. The second difficulty set
+        level of difficulty would be a number between 1 and 10. The second difficulty set
         would be between 1 and 100. The third difficulty set would be between 1 and 1000.
         Prompt for the difficulty level, and then start the game. The computer picks a
         random number in that range and prompts the player to guess that number. Each time
@@ -31,25 +59,7 @@ public class Ex32 {
         Constraints
             Don’t allow any non-numeric data entry.
             During the game, count non-numeric entries as wrong guesses.*/
-
-        Scanner input = new Scanner(System.in);
-        System.out.print("Let's play Guess the Number.\nPick a difficulty level (1, 2, or 3): ");
-        String difficulty = input.nextLine();
-
-        System.out.print("I have my number. What's your guess? ");
-        String guess = input.nextLine();
-
-        System.out.print("Too low. Guess again: ");
-        guess = input.nextLine();
-
-        System.out.print("Too high. Guess again: ");
-        guess = input.nextLine();
-
-        System.out.print("You got it in " + 3 + " guesses!"); //FIXME - REMOVE HARDCODED NUMBER
-        System.out.print("Play again? ");
-        String decision = input.nextLine();
-
-        System.out.print("Goodbye!");
-
+        //FIXME - Convert guess to string and allow non-numeric guesses - prevent non-numeric level choices
+        readUserInput();
     }
 }

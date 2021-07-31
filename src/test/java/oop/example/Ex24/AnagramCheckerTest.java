@@ -78,8 +78,6 @@ class AnagramCheckerTest {
         boolean actual = check.isAnagram("note", "not");
         assertFalse(actual);
     }
-
-
 }
 
 

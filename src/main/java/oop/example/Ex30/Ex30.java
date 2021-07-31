@@ -4,7 +4,6 @@
  */
 package oop.example.Ex30;
 
-//FIXME - Make Test Cases
 
 public class Ex30 {
     public static void main(String[] args) {
