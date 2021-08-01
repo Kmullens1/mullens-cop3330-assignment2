@@ -13,23 +13,19 @@ public class Ex32 {
         String decision = "y";
         while (decision.equals("y")) {
             System.out.print("Let's play Guess the Number.\nPick a difficulty level (1, 2, or 3): ");
-            String choice = input.nextLine();
-            while(!(choice.equals("1")) || !(choice.equals("2")) || !(choice.equals("3")))
+            int difficulty = input.nextInt();
+            while(difficulty != 1 && difficulty != 2 && difficulty != 3)
             {
                 System.out.print("That is an invalid difficulty level. Choose again: ");
-                choice = input.nextLine();
+                difficulty = input.nextInt();
             }
 
-            int difficulty = Integer.parseInt(choice);
             RandomNumberGenerator generate = new RandomNumberGenerator();
             int randomNumber = generate.generateNumber(difficulty);
 
-            //FIXME FIXME FIXME
             System.out.print("I have my number. What's your guess? ");
-            String number = input.nextLine();
-            //if number is a string, ++count --> if number is a number analyze if it's too high or too low
+            int guess = input.nextInt();
 
-            int guess = Integer.parseInt(number);
             int count = 1;
             while (randomNumber != guess) {
                 String feedback = generate.analyzeGuess(randomNumber, guess);
@@ -69,7 +65,7 @@ public class Ex32 {
         Constraints
             Don’t allow any non-numeric data entry.
             During the game, count non-numeric entries as wrong guesses.*/
-        //FIXME - Convert guess to string and allow non-numeric guesses - prevent non-numeric level choices
+        //FIXME - Somehow allow non-numeric guesses that count against your score somehow....
         readUserInput();
     }
 }

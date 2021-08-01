@@ -77,7 +77,7 @@ public class PasswordValidator {
     boolean special(String password)
     {
         boolean indicator = false;
-        String specialChars[] = {" ", "~", "`", "!", "@", "#", "$", "%", "^",
+        String[] specialChars = {" ", "~", "`", "!", "@", "#", "$", "%", "^",
                 "&", "*", "(", ")", "_", "-", "+", "=", "{", "}", "[", "]",
                 "|", "/", ":", ";", "'", ",", ".", "<", ">", "?", "\\", "\""};
 
