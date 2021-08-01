@@ -4,9 +4,32 @@
  */
 package oop.example.Ex35;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class Ex35 {
+    private static final Scanner input = new Scanner(System.in);
+
+    public static void readUserInput() {
+
+        List names = new ArrayList();
+
+        System.out.print("Enter a name: ");
+        String newName = input.nextLine();
+
+        while (!(newName.equals(""))) {
+            names.add(newName);
+            System.out.print("Enter a name: ");
+            newName = input.nextLine();
+        }
+
+        SelectAWinner select = new SelectAWinner();
+        String winner = select.randomWinner(names);
+
+        System.out.print("The winner is... " + winner + ".");
+    }
+
     public static void main(String[] args) {
         //Picking a Winner
         /*Arrays don’t have to be hard-coded. You can take user input and store it
@@ -29,12 +52,7 @@ public class Ex35 {
             Some languages require that you define the length of the array ahead of time.
             You may need to find another data structure, like an ArrayList.*/
 
-        Scanner input = new Scanner(System.in);
-        System.out.print("Enter a name: ");
-        String name = input.next();
-
-        String randomWinner = "";
-        System.out.print("The winner is... " + randomWinner);
+        readUserInput();
 
     }
 }
