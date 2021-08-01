@@ -8,13 +8,13 @@ public class ListOfNamesOrganizer {
         String[] newListOfNames = new String[listOfNames.length - 1];
 
         for (int i = 0, j = 0; i < listOfNames.length; i++) {
-            if (listOfNames[i].equals(nameToDelete)) {
+            if (!(listOfNames[i].equals(nameToDelete))) {
                 newListOfNames[j] = listOfNames[i];
-                j++;  //FIXME - prints out wrong list
+                j++;
             }
         }
 
-        return listOfNames; //return newListOfNames;
+        return newListOfNames; //return newListOfNames;
     }
 
 }
