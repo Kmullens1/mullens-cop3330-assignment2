@@ -7,6 +7,19 @@ package oop.example.Ex33;
 import java.util.Scanner;
 
 public class Ex33 {
+    private static final Scanner input = new Scanner(System.in);
+
+    public static String readUserInput()
+    {
+        System.out.print("What's your question? ");
+        String question = input.nextLine();
+
+        shakeTheEightBall shake = new shakeTheEightBall();
+        String randomResponse = shake.generateRandomNum();
+
+        return randomResponse;
+    }
+
     public static void main(String[] args) {
         //Magic 8 Ball
         /*Arrays are great for storing possible responses from a program. If you
@@ -22,15 +35,9 @@ public class Ex33 {
         The value should be chosen randomly using a pseudo random number generator.
         Store the possible choices in a list and select one at random.*/
 
-        Scanner input = new Scanner(System.in);
-        System.out.print("What's your question? ");
-        String question = input.nextLine();
-
-
-        System.out.print("Yes.");
-        System.out.print("No.");
-        System.out.print("Maybe.");
-        System.out.print("Ask again later.");
+        String randomResponse = readUserInput();
+        System.out.print(randomResponse);
 
     }
 }
+
