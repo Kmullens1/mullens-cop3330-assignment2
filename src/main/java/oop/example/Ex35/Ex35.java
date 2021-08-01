@@ -13,7 +13,7 @@ public class Ex35 {
 
     public static void readUserInput() {
 
-        List names = new ArrayList();
+        List<String> names = new ArrayList();
 
         System.out.print("Enter a name: ");
         String newName = input.nextLine();
@@ -25,7 +25,9 @@ public class Ex35 {
         }
 
         SelectAWinner select = new SelectAWinner();
-        String winner = select.randomWinner(names);
+        int randNum = select.randomWinner(names);
+
+        String winner = (String) names.get(randNum);
 
         System.out.print("The winner is... " + winner + ".");
     }
