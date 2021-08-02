@@ -52,4 +52,5 @@ class StatsCalculationsTest {
 
         assertEquals(expected, actual);
     }
+
 }
