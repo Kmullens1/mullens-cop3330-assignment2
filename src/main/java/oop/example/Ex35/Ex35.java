@@ -27,7 +27,7 @@ public class Ex35 {
         SelectAWinner select = new SelectAWinner();
         int randNum = select.randomWinner(names);
 
-        String winner = (String) names.get(randNum);
+        String winner = names.get(randNum);
 
         System.out.print("The winner is... " + winner + ".");
     }

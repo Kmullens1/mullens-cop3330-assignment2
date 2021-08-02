@@ -4,9 +4,28 @@
  */
 package oop.example.Ex36;
 
+import java.text.DecimalFormat;
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Ex36 {
+    private static final Scanner input = new Scanner(System.in);
+
+    public static ArrayList<String> readUserInput()
+    {
+        String number = "";
+        ArrayList<String> stats = new ArrayList<>();
+        while(!(number.equals("done")))
+        {
+            System.out.print("Enter a number: ");
+            number = input.nextLine();
+            if(!(number.equals("done")))
+                stats.add(number);
+        }
+
+        return stats;
+    }
+
     public static void main(String[] args) {
         //Computing Statistics
         /*Statistics is important in our field. When measuring response times or
@@ -34,21 +53,28 @@ public class Ex36 {
             Be sure to properly convert numeric values to strings.
             Keep the input separate from the processing and the output.*/
 
-        Scanner input = new Scanner(System.in);
-        System.out.print("Enter a number: ");
-        String number = input.nextLine();       //FIXME - String or int???
+        ArrayList<String> stats;
+        stats = readUserInput();
+        double[] newStats = new double[stats.size()];
 
-        System.out.print("Numbers: "); //print the list after quotation
+        ArrayList<Double> convertStats = new ArrayList<>();
+        for (int i = 0; i < stats.size(); i++) {
+            convertStats.add(Double.valueOf(stats.get(i)));
+            newStats[i] = convertStats.get(i);
+        }
 
-        double average = -1500;
-        double min = -1500;
-        double max = -1500;
-        double standardDev = -1500;
 
-        System.out.print("The average is " + average + ".\n" +
-                "The minimum is " + min + ".\n" +
-                "The maximum is " + max + ".\n" +
-                "The standard deviation is " + standardDev + ".");
+        StatsCalculations calculate = new StatsCalculations();
+        double average = calculate.calculateAverage(newStats);
+        double min = calculate.calculateMinimum(newStats);
+        double max = calculate.calculateMaximum(newStats);
+        double standardDev = calculate.calculateStandardDev(newStats, average);
 
+        DecimalFormat df = new DecimalFormat("###.###");
+        System.out.print("The average is " + df.format(average) + ".\n" +
+                "The minimum is " + df.format(min) + ".\n" +
+                "The maximum is " + df.format(max) + ".\n" +
+                "The standard deviation is " + df.format(standardDev) + ".");
     }
+
 }
