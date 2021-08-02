@@ -4,9 +4,28 @@
  */
 package oop.example.Ex37;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Ex37 {
+    private static final Scanner input = new Scanner(System.in);
+
+    public static void readUserInput()
+    {
+        System.out.print("What's the minimum length? ");
+        int minLength = input.nextInt();
+
+        System.out.print("How many special characters? ");
+        int numOfSpecialChars = input.nextInt();
+
+        System.out.print("How many numbers? ");
+        int numOfNumbers = input.nextInt();
+
+        generatePassword generate = new generatePassword();
+        String password = generate.passwordBuilder(minLength, numOfSpecialChars, numOfNumbers);
+
+        System.out.print("Your password is " + password);
+    }
     public static void main(String[] args) {
         //Password Generator
         /*Coming up with a password that meets specific requirements is something
@@ -24,18 +43,7 @@ public class Ex37 {
             Use lists to store the characters you’ll use to generate the passwords.
             Add some randomness to the password generation.*/
 
-        Scanner input = new Scanner(System.in);
-        System.out.print("What's the minimum length? ");
-        int minLength = input.nextInt();
-
-        System.out.print("How many special characters? ");
-        String numOfSpecialCharacters = input.nextLine();
-
-        System.out.print("How many numbers? ");
-        int numOfNumbers = input.nextInt();
-
-        String password = "";
-        System.out.print("Your password is " + password);
+        readUserInput();
 
     }
 }
