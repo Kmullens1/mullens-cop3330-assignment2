@@ -10,10 +10,13 @@ public class generatePassword {
     public String passwordBuilder(int minLength, int numOfSpecialChars, int numOfNumbers) {
         ArrayList<String> initialPassword = new ArrayList<>();
 
-        for(int i = 0; i < numOfSpecialChars; i++)
+        if(initialPassword.size() < minLength)
         {
-            String character = randomSpecialChar();
-            initialPassword.add(character);
+            for (int i = 0; i < numOfSpecialChars; i++)
+            {
+                String character = randomSpecialChar();
+                initialPassword.add(character);
+            }
         }
 
         if(initialPassword.size() < minLength)
@@ -77,6 +80,5 @@ public class generatePassword {
     }
 
 }
-
 
 
