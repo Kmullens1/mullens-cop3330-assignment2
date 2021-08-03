@@ -3,7 +3,7 @@ package oop.example.Ex38;
 import java.util.ArrayList;
 
 public class SortNumbers {
-    public ArrayList<String> filterEvenNumbers(String listOfNumbers)
+    public String[] filterEvenNumbers(String listOfNumbers)
     {
         String[] arrayOfNumbers = listOfNumbers.split(" ");
         ArrayList<String> listOfEvenNumbers = new ArrayList<>();
@@ -17,7 +17,7 @@ public class SortNumbers {
                 listOfEvenNumbers.add(arrayOfNumbers[i]);
             }
         }
-
-    return listOfEvenNumbers;
+        String[] stringOfEvenNumbers = listOfEvenNumbers.toArray(new String[0]);
+    return stringOfEvenNumbers;
     }
 }

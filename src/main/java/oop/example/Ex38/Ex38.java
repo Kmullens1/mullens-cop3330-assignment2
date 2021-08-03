@@ -4,7 +4,6 @@
  */
 package oop.example.Ex38;
 
-import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Ex38 {
@@ -16,17 +15,17 @@ public class Ex38 {
         String listOfNumbers = input.nextLine();
 
         SortNumbers sort = new SortNumbers();
-        ArrayList<String> listOfEvenNumbers = sort.filterEvenNumbers(listOfNumbers);
+        String[] listOfEvenNumbers = sort.filterEvenNumbers(listOfNumbers);
 
-        if(listOfEvenNumbers.size() == 0)
+        if(listOfEvenNumbers.length == 0)
         {
             System.out.print("There are no even numbers in that list.");
         }
         else
         {
             System.out.print("The even numbers are");
-            for (int i = 0; i < listOfEvenNumbers.size(); i++) {
-                System.out.print(" " + listOfEvenNumbers.get(i));
+            for (int i = 0; i < listOfEvenNumbers.length; i++) {
+                System.out.print(" " + listOfEvenNumbers[i]);
             }
             System.out.print(".");
         }
