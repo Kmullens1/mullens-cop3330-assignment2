@@ -4,9 +4,34 @@
  */
 package oop.example.Ex38;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Ex38 {
+    private static final Scanner input = new Scanner(System.in);
+
+    public static void readUserInput()
+    {
+        System.out.print("Enter a list of numbers, separated by spaces: ");
+        String listOfNumbers = input.nextLine();
+
+        SortNumbers sort = new SortNumbers();
+        ArrayList<String> listOfEvenNumbers = sort.filterEvenNumbers(listOfNumbers);
+
+        if(listOfEvenNumbers.size() == 0)
+        {
+            System.out.print("There are no even numbers in that list.");
+        }
+        else
+        {
+            System.out.print("The even numbers are");
+            for (int i = 0; i < listOfEvenNumbers.size(); i++) {
+                System.out.print(" " + listOfEvenNumbers.get(i));
+            }
+            System.out.print(".");
+        }
+    }
+
     public static void main(String[] args) {
         //Filtering Values
         /*Sometimes input you collect will need to be filtered down. Data structures
@@ -26,12 +51,7 @@ public class Ex38 {
             The function takes in the old array and returns the new array.
          */
 
-        System.out.print("Enter a list of numbers, separated by spaces: ");
-        //For loop to read numbers
-
-        int evenNumbers = -1500; // FIXME - Will eventually be a list
-        System.out.print("The even numbers are " + evenNumbers + ".");
+        readUserInput();
 
     }
-
 }
