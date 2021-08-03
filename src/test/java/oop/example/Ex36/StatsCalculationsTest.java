@@ -8,7 +8,7 @@ class StatsCalculationsTest {
     ////CALCULATE AVERAGE//////////////////////////////////////////////////////////////////////
     @Test
     void calculateAverage() {
-        StatsCalculationsTest calculate = new StatsCalculationsTest();
+        StatsCalculations calculate = new StatsCalculations();
 
         double[] newStats = {2, 9, 4, 5, 6, 8};
 
@@ -22,7 +22,7 @@ class StatsCalculationsTest {
     ////CALCULATE MINIMUM//////////////////////////////////////////////////////////////////////
     @Test
     void calculateMinimum() {
-        StatsCalculationsTest calculate = new StatsCalculationsTest();
+        StatsCalculations calculate = new StatsCalculations();
         double[] newStats = {2, 9, 4, 5, 6, 8};
 
         double expected = 2;
@@ -35,7 +35,7 @@ class StatsCalculationsTest {
     ////CALCULATE MAXIMUM//////////////////////////////////////////////////////////////////////
     @Test
     void calculateMaximum() {
-        StatsCalculationsTest calculate = new StatsCalculationsTest();
+        StatsCalculations calculate = new StatsCalculations();
         double[] newStats = {2, 9, 4, 5, 6, 8};
 
         double expected = 9;
@@ -48,7 +48,7 @@ class StatsCalculationsTest {
     ////CALCULATE STANDARD DEVIATION///////////////////////////////////////////////////////////
     @Test
     void calculateStandardDev() {
-        StatsCalculationsTest calculate = new StatsCalculationsTest();
+        StatsCalculations calculate = new StatsCalculations();
         double[] newStats = {56, 33, 2, 56, 98};
 
         double expected = Math.sqrt(1241);
@@ -57,9 +57,5 @@ class StatsCalculationsTest {
 
         assertEquals(expected, actual);
     }
-
-    //FIXME - I'm really not sure why newStats is considered the wrong data type...
-    //        the test SHOULD work in theory
-    //FIXME - May have something to do with the size of the array somehow??
 
 }
