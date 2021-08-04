@@ -1,7 +1,10 @@
 package oop.example.Ex24;
 
 import java.util.Arrays;
-
+/*
+ *  UCF COP3330 Summer 2021 Assignment 2 Solution
+ *  Copyright 2021 Keri Mullens
+ */
 public class AnagramChecker {
     public Boolean isAnagram(String first, String second)
     {
