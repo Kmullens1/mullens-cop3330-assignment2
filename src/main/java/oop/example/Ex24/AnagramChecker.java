@@ -16,8 +16,8 @@ public class AnagramChecker {
 
         else
         {
-            char tempChar1[] = first.toCharArray();
-            char tempChar2[] = second.toCharArray();
+            char[] tempChar1 = first.toCharArray();
+            char[] tempChar2 = second.toCharArray();
             Arrays.sort(tempChar1);
             Arrays.sort(tempChar2);
 
